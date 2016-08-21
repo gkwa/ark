@@ -3,14 +3,7 @@
 # For more information on the Policyfile feature, visit
 # https://github.com/chef/chef-dk/blob/master/POLICYFILE_README.md
 
-# A name that describes what the system you're building with Chef does.
-name "example-application-service"
-
-# Where to find external cookbooks:
+name 'ark'
 default_source :supermarket
-
-# run_list: chef-client will run these recipes in the order specified.
-run_list "example_cookbook::default"
-
-# Specify a custom source for a single cookbook:
-# cookbook "example_cookbook", path: "../cookbooks/example_cookbook"
+run_list 'ark::default'
+cookbook 'ark', github: 'taylormonacelli/ark'
